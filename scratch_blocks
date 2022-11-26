@@ -1,0 +1,50 @@
+npm install
+npm link
+npm link scratch-blocks
+Blockly.Blocks['motion_movesteps'] = {
+  /**
+   * Block to move steps.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_MOVESTEPS,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "STEPS"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+// motion.js
+Blockly.Blocks['motion_setyto0'] = {
+  /**
+   * Block to set the y to some number.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_SETYTO0,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+// motion.js
+Blockly.Blocks['motion_setxto0'] = {
+  /**
+   * Block to move set x to some number,
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_MOVE100STEPS,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
