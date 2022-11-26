@@ -48,3 +48,4 @@ Blockly.Blocks['motion_setxto0'] = {
     });
   }
 };
+npm run prepublish
