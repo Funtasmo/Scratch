@@ -49,3 +49,26 @@ Blockly.Blocks['motion_setxto0'] = {
   }
 };
 npm run prepublish
+class Scratch3MotionBlocks {
+  getPrimitives () {
+        return {
+            motion_move100steps: this.move100Steps,
+           // Other Blocks
+        };
+    };
+    
+    // Other Functions
+    move10Steps (args, util) {
+        const steps = 10;
+        const radians = MathUtil.degToRad(90 - util.target.direction);
+        const dx = steps * Math.cos(radians);
+        const dy = steps * Math.sin(radians);
+        util.target.setXY(util.target.x + dx, util.target.y + dy)
+    }
+    moveSteps (args, util) {
+  const steps = Cast.toNumber(args.STEPS*10);
+  const radians = MathUtil.degToRad(90 - util.target.direction);
+  const dx = steps * Math.cos(radians);
+  const dy = steps * Math.sin(radians);
+  util.target.setXY(util.target.x + dx, util.target.y + dy);
+}
